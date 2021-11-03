@@ -1,0 +1,83 @@
+/* ########## */
+/* TYPOGRAPHY */
+/* ---------- */
+
+h1,
+h2,
+p { margin-top: 0; }
+
+h1,
+h2,
+strong { font-weight: 700; }
+
+h1,
+h2,
+.p-subtitle-main { color: black; }
+
+/* ---------- */
+
+.h1-hero {
+    color: inherit;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.h1-main {
+    font-size: 3rem;
+    margin-bottom: .8em;
+    justify-self: center;
+}
+
+.h1-main::after {
+    background: #ffe600;
+    content: "";
+    display: block;
+    height: 30px;
+    margin-left: 10px;
+    margin-top: -40px;
+    width: 100%;
+}
+
+.h2-main { font-size: 1.125rem; }
+
+.h2-main::after {
+    background: #ffe600;
+    content: '';
+    display: block;
+    height: 3px; width: 60px;
+    margin-top: 10px;
+}
+
+.h2-main--home-pg::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------- */
+
+.p-hero,
+.p-subtitle-main { font-size: 1.125rem; }
+
+.p-footer { margin-bottom: 4em; }
+
+.p-subtitle-main {
+    font-weight: bolder;
+    justify-self: center;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+/* ---------- */
+
+.span-accent { color: #ffe600; }
+
+/* ------------- */
+
+@media (min-width: 600px) {
+
+    .p-subtitle-main {
+        max-width: 640px;
+        width: 80%;
+    }
+
+}

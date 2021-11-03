@@ -1,0 +1,157 @@
+/* ###### */
+/* LAYOUT */
+/* ------ */
+
+* {
+   /* border: 1px dotted hotpink; */
+   box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #404040;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Stretch pages across viewport's height --- */
+
+body {
+    display: grid;
+    /* fr = fraction remaining */
+    grid-template-rows: auto 1fr auto;
+    /* grid-template-rows: min-content 1fr min-content; */
+    /* grid-template-rows: min-content auto min-content; */
+    min-height: 100vh;
+}
+
+main { align-self: start; }
+
+/* deal with .header--home-pg absolute position */
+.main--home-pg { grid-row: 1 / span 2; }
+
+/* ---------------------------------------------- */
+
+footer,
+.main-body,
+.section-main--home-pg { padding: 4em 0; }
+
+.main-body > *,
+.container-header,
+.section-hero > *,
+.section-main--home-pg > * { grid-column: 2 / -2; }
+
+/* ------ */
+
+footer {
+    background: #ebebeb;
+    grid-template-areas:
+        ". social ."
+        ". main .";
+    text-align: center;
+}
+
+header { background: black; }
+
+/* ------ */
+
+.aside-footer {
+    grid-area: social;
+    margin-bottom: 2em;
+    white-space: nowrap;
+}
+
+.col-home-pg {
+    margin-top: 1.25em;
+    text-align: center;
+}
+
+.container-header {
+    /* align items center is a hack for Safari */
+    /* prevent small screen nav content */
+    /* vertical shifting out of the screen top */
+    align-items: center;
+    display: flex;
+}
+
+.gridtracks {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
+}
+
+/* Make hero slide up under the header (with navigation) */
+/* just for the esthetic effect */
+.header--home-pg {
+    background: transparent;
+    position: absolute;
+    /* absolute|fixed position removes block's default 100% width */
+    /* the element is now sized to fit its content */
+    /* if 100% width required, must be declared */
+    /* most often required to match other block elements */
+    width: 100vw;
+}
+
+.section-footer {
+    grid-area: main;
+    opacity: .4;
+}
+
+.section-hero {
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    padding: 8em 0 4em;
+}
+
+/* ------------- */
+
+@media (min-width: 400px) {
+
+    .section-hero > * { margin-right: 20%; }
+
+}
+
+/* ------------- */
+
+@media (min-width: 600px) {
+
+    .aside-main,
+    .col-home-pg:first-child { grid-column: 2; }
+
+    .section-hero > * { grid-column: 2 / span 2; }
+
+    .section-main--home-pg > * { grid-column: span 1; }
+
+    /* ------------- */
+
+    footer { grid-template-areas: ". main main social ."; }
+
+    /* ------------- */
+
+    .aside-footer {
+        align-self: center;
+        margin-bottom: unset;
+        text-align: right;
+    }
+
+    .aside-main { order: 1; }
+
+    .gridtracks {
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(150px, 320px)) minmax(1em, 1fr);
+        column-gap: 2em;
+    }
+
+    .section-footer { text-align: left; }
+
+    .section-hero { padding: 8em 0 6em; }
+
+    .section-main { grid-column: 3 / -2; }
+
+}

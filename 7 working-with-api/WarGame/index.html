@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Awesome War Game</title>
+</head>
+
+<body class="flex">
+    <header class="container">
+        <nav>
+            <h1>Awesome War Game</h1>
+            <button id="new-game">New Game</button>
+        </nav>
+    </header>
+    <main class="container display-none">
+        <p class="remaining">Remaining Cards: <span id="remaining">52</span></p>
+        <div class="player">
+            <p>Computer</p>
+            <div class="card" id="cardComputer">
+            </div>
+            <p>Score: <span id="computer-score">0</span></p>
+        </div>
+        <h3 id="status">WAR</h3>
+        <div class="player">
+            <p>Player</p>
+            <div class="card" id="cardPlayer">
+            </div>
+            <p>Score: <span id="player-score">0</span></p>
+        </div>
+        <button id="draw-card">Draw New Card</button>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+/* ====== */
+/* Global */
+/* ====== */
+
+/* box-sizing reset on html doesn't work */
+/* (scrolling required) */
+/* dunno why; ok, resetting on `*` */
+* { box-sizing: border-box; }
+
+body {
+    color: #404040;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* ========== */
+/* Typography */
+/* ========== */
+
+h1,
+h2,
+p { margin-top: 0; }
+
+h1 + p,
+h2 + p {
+    color: #F18119;
+    font-size: 1.3125rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 + p { margin: 0; }
+
+h2 + p { font-size: 1rem; }
+
+h1 {
+    color: #fff;
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin: .625em 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin-bottom: .2em;
+}
+
+strong { font-weight: 900; }
+
+.p-intro-top-text {
+    align-self: center;
+    border-image: linear-gradient(90deg, #ffa51d, #ff713b) 1;
+    border-top: 5px solid;
+    color: #F18119;
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    order: -1;
+    padding-top: 2px;
+    text-transform: uppercase;
+}
+
+.p-registration-privacy {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+/* ====== */
+/* Layout */
+/* ====== */
+
+.section-intro,
+.section-registration { padding: 2em 1em; }
+
+.section-intro {
+    background-blend-mode: overlay;
+    background-color: #404040;
+    background-image: url(../images/ribs.jpg); /* step up/out: ../.. !!! */
+    /* background-image: url(../images/ribs.jpg), linear-gradient(45deg, red, blue); */
+    background-position: center;
+    background-size: cover;
+    padding-top: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* ==== */
+/* Form */
+/* ==== */
+
+input,
+button {
+    border-radius: 5px;
+    margin-bottom: .75em;
+    text-align: inherit;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #404040;
+    font-family: inherit;
+    font-size: inherit;
+    padding: .25em;
+    transition: transform .35s;
+}
+input:focus,
+input:hover { transform: scale(1.04); }
+
+.form-email-collector {
+    width: 80%;
+    margin: 0 auto .5em;
+}
+
+.btn {
+    border: 0;
+    cursor: pointer;
+    font-size: .625em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-image: linear-gradient(90deg, #ffa51d, #ff713b);
+    color: white;
+    transition: transform .35s;
+    /* transition: color .35s; */
+}
+.btn-primary:focus,
+.btn-primary:hover {
+    transform: scale(1.04);
+    /* background-color: #f18119; */
+    /* color: #404040; */
+}
+
+/* ============= */
+/* Media queries */
+/* ============= */
+
+@media (min-width: 590px) {
+    /* ========================= */
+    
+    body { font-size: 1.125rem; }
+
+    /* ========================= */
+
+    h2 + p { font-size: 1.75rem; }
+
+    h1 { font-size: 3.5rem; }
+
+    /* ========================= */
+
+    main { 
+        display: flex; 
+        min-height: 100vh; 
+    }
+
+    .section-intro,
+    .section-registration {
+        /* stretch children - now flex-items - vertically */
+        /* via flex-items' default `align-self: stretch;` */
+        /* replaces declaring 100% height on container's children */
+        display: flex;
+        width: 50%; 
+    }
+
+    .section-registration {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

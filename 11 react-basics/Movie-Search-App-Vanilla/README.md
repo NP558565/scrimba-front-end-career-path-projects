@@ -1,0 +1,1 @@
+# Vanilla-JS-Movie-Search-App

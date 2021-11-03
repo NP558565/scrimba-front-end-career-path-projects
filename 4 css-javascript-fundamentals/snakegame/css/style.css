@@ -1,0 +1,76 @@
+body {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    background: url(../images/snake.jpg);
+    color: #622900;
+}
+
+p {
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+#score,
+#high-score {
+    color: #091860;
+}
+
+.scores {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+.hs {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: #51424f;
+    color: #fb4f93;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.2);
+    color: #00aaa9;
+    /* margin: 10px; */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+    border: 2px solid;
+    margin: 10px auto;
+    background: #bc7c35;
+    background-size: cover;
+}
+
+.square {
+    height: 40px;
+    width: 40px;
+}
+
+.snake {
+    background-color: purple;
+}
+
+.snake-head {
+    background: red;
+}
+
+.apple {
+    background: yellow;
+}

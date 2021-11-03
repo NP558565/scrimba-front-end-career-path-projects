@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pure JS Movie Search App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vanilla JS Movie Search App</h1>
+
+      <form id="btn-search" class="header-slide">
+        <label class="movie-span">movie name</label>
+        <input type="text" placeholder="Enter movie title" id="movie-search" />
+        <button type="submit" class="btn">
+          <img
+            id="icon-search"
+            src="https://img.icons8.com/material-outlined/48/000000/search--v1.png"
+          />
+        </button>
+      </form>
+
+      <p class="hide" id="hide-search">Searching....</p>
+
+      <div id="genre-listing" class="genre-list"></div>
+    </header>
+    <main id="content">
+      <div class="inner-content"></div>
+      <div class="section-container" id="gen-Top">
+        <h3 class="section-title">Top rated movies</h3>
+        <div id="top-rated-content"></div>
+      </div>
+
+      <div class="section-container" id="gen-Popular">
+        <h3 class="section-title">Popular Movies</h3>
+        <div id="popular"></div>
+      </div>
+
+      <div class="section-container" id="gen-Trending(24H)">
+        <h3 class="section-title">Trending (Last 24 Hours)</h3>
+        <div id="trending-day"></div>
+      </div>
+
+      <div class="section-container" id="gen-Trending(Week)">
+        <h3 class="section-title">Trending (All week)</h3>
+        <div id="trending-week"></div>
+      </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

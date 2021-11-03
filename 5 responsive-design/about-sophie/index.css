@@ -1,0 +1,26 @@
+/* DON'T TOUCH THIS! */
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+.title-container {
+    font-size: 4em;
+    color: #174885;
+}
+
+.section-title {
+    font-size: 3em;
+    margin: 10%;
+    color: #3278cf;
+}
+
+/* DON'T TOUCH THIS! */
+
+/* Your main goal is to style and improve the HTML given to you. You have to center all the text on the page & set the font to Roboto, capitalize all the titles, give the main title a font size of 4em and the section titles a size of 3em, and give all the sections an overall margin of 10% of the height of the page. The section titles must have a color of #3278cf, while the main title must have a color of #174885. Good luck! */

@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+.colors {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+
+.color {
+	width: 10%;
+	height: 10%;
+}

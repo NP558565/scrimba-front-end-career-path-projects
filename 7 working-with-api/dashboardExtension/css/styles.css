@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0 .2em;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	color: #fff;
+	background: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	text-shadow: 2px 2px 4px #474747;
+}
+
+#crypto {
+	grid-area: c;
+	padding: 1.2em 1em;
+}
+
+#weather {
+	grid-area: w;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+.temp-box{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+}
+
+.weather-img {
+	max-width: 110px;
+}
+
+.temp {
+	font-size: 2rem;
+}
+
+.city-name {
+	font-size: 2rem;
+	margin-right: .2em;
+}
+
+#time {
+	font-size: 4.5rem;
+	grid-area: t;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#author {
+	grid-area: a;
+	display: flex;
+	align-items: flex-end;
+}
+
+main {
+	padding: .2em;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas:
+			'c . w'
+			'. t .'
+			'a . .';
+}
+

@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: antiquewhite;
+}
+
+.photos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo {
+	width: 18%;
+	height: auto;
+
+	margin: 1em;
+	padding: 0;
+
+	border: 2px solid rebeccapurple;
+	border-radius: 1em;
+}
+
+.outerImageDiv {
+	position: fixed;
+	height: 100%;
+	inset: 0;
+
+	display: flex;
+
+	background-color: rgba(0, 0, 0, 0.664);
+}
+
+.onscreen {
+	height: auto;
+	width: 30vw;
+
+	margin: auto;
+
+	border: 1px solid white;
+	border-radius: 0;
+}
+
+@media (max-width: 980px) {
+	.onscreen {
+		width: 65vw;
+	}
+}
+
+@media (max-width: 680px) {
+	.onscreen {
+		width: 85vw;
+	}
+}

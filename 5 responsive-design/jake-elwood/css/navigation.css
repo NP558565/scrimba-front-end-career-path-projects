@@ -1,0 +1,105 @@
+/* ########## */
+/* NAVIGATION */
+/* ---------- */
+
+.ul-nav-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- */
+
+.a-li-nav-header {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.a-li-nav-header.current {
+    border-bottom: 2px solid #ffe600;
+    padding-bottom: .25em;
+}
+
+/* ---------- */
+
+/* Verb, if present, first to: */
+/* prompt action */
+/* distinguish from a state (class) name */
+.btn--close-nav-header {
+    color: #ffe600;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: .5em;
+    position: absolute;
+}
+
+.btn--open-nav-header {
+    color: white;
+    font-size: 2rem;
+    margin-left: auto;
+    padding: 0;
+}
+
+/* ---------- */
+
+.nav-header {
+    background: black;
+    /* left:value shifts this to right, off of the canvas */
+    position: fixed; top: 0; bottom: 0; left: 100vw;
+    transform: translateX(0);
+    /* transition close/open states smoothly */
+    transition: transform 250ms;
+    /* prevent shrinking when shifted to the right */
+    width: 100vw;
+}
+
+/* a state (modifier) class */
+/* is added|removed in js/script.js */
+.nav-header--open { transform: translateX(-100vw); }
+
+/* ------------- */
+
+@media (min-width: 600px) {
+
+    .ul-nav-header {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    /* ------------- */
+
+    .a-li-nav-header {
+        font-size: 1rem;
+        margin-left: 2em;
+    }
+
+    /* ------------- */
+
+    .btn--close-nav-header,
+    .btn--open-nav-header { display: none; }
+
+    /* ------------- */
+
+    /* completely clear/undo .nav-header */
+    /* mobile 1st (small screen) styling */
+    /* (i.e. positioning & sizing) */
+    .nav-header {
+        position: unset;
+        width: unset;
+    }
+
+    /* do not obscure hero background image */
+    .nav-header--home-pg { background: transparent; }
+
+    /* un-slide (now large screen) .nav-header back into viewport */
+    /* upon resizing browser window up with small screen .nav-header open */
+    /* i.e., undo still active .nav-header--open { transform: translate(-100vw); } */
+    .nav-header--open { transform: translateX(0); }
+}
